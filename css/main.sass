@@ -1,0 +1,664 @@
+@font-face
+  font-family: "Rubik"
+  src: url(../source/fonts/Rubik/Rubik-Regular.ttf)
+
+@font-face
+  font-family: "Rubik-bold"
+  src: url(../source/fonts/Rubik/Rubik-Bold.ttf)
+
+body
+  font-family: "Rubik"
+
+p
+  font-size: 14px
+  line-height: 18px
+  font-weight: 400
+
+header p
+  font-size: 12px
+  line-height: 33px
+  font-weight: 400
+  color: #242424
+
+.header_top
+  height: 45px
+  background: #f8f9f9
+
+  p, li
+    font-size: 12px
+    margin-top: 15px
+    font-weight: 400
+    line-height: 12px
+
+  ul li
+    float: left
+    list-style-type: none
+    padding: 0 15px
+    border-right: 1px solid #e1e1e1
+
+  ul li:last-of-type
+    padding-right: 0
+    border: 0
+
+  ul li:first-of-type
+    padding-left: 0
+
+.header_mine
+  padding: 30px 0 15px
+
+.logo a
+  font-size: 50px
+  line-height: 50px
+  color: #000
+
+  &:hover
+    text-decoration: none
+
+header .form
+  width: 550px
+  height: 46px
+  border: 1px solid #e1e1e1
+  border-radius: 3px
+
+input[type="text"]
+  border-radius: 0
+  border: 0
+  width: 350px
+  height: 22px
+  margin-top: 10px
+  border-left: 1px solid #e1e1e1
+  padding-left: 20px
+
+button.search
+  width: 45px
+  height: 45px
+  background-color: #fed700
+  border: 0
+  float: right
+  border-radius: 3px
+  font-size: 20px
+  font-weight: 200
+
+.usr_links a
+  display: block
+
+.usr_links .item
+  width: 45px
+  height: 45px
+  border: 1px solid #e1e1e1
+  float: left
+  margin-right: 20px
+  text-align: center
+  border-radius: 3px
+
+  i
+    color: #000
+    font-size: 20px
+    line-height: 45px
+
+.usr_links a:last-of-type .item
+  border-radius: 5px
+  width: 120px
+  height: 45px
+  background-color: #e80f0f
+  margin-right: 0
+
+  i, span
+    color: #fff
+    line-height: 40px
+
+  span
+    border-left: 1px solid #fff
+    padding-left: 8px
+    margin-left: 8px
+
+nav
+  height: 50px
+  background-color: #fed700
+
+  ul li
+    float: left
+    list-style-type: none
+    padding-right: 15px
+    font-size: 14px
+    line-height: 34px
+    font-weight: 500
+    color: #000
+
+  .addres
+    line-height: 50px
+
+    i
+      font-size: 25px
+      margin-right: 10px
+
+    a
+      color: #000
+
+main
+  margin-top: 20px
+
+.categories
+  margin: 10px auto
+
+.categories_title
+  font-family: "Rubik-bold"
+  border-radius: 3px
+  width: 260px
+  background-color: #fed700
+  font-size: 14px
+  font-weight: 500
+  vertical-align: middle
+  margin: -10px auto 0
+
+  p
+    padding: 18px 30px
+    vertical-align: middle
+    margin-bottom: 0
+
+    i
+      font-size: 20px
+      padding-right: 20px
+      margin-top: -2px
+
+.categories_list
+  width: 260px
+  background-color: #ffffff
+  border: 1px solid #e1e1e1
+  border-radius: 3px
+  padding-top: 26px
+  margin: -3px auto 0
+
+  li
+    list-style-type: none
+    font-size: 14px
+    line-height: 35px
+
+    a
+      font-weight: 400
+      color: #242424
+
+.categories_more
+  border-top: 1px solid #e1e1e1
+  width: 180px
+
+.main_offer_block
+  background-color: #f7f7f7
+  border: 1px solid #e1e1e1
+  width: 100%
+  height: 100%
+  padding: 77px 57px
+
+  p
+    font-size: 18px
+
+  h1
+    font-size: 36px
+    padding-bottom: 5px
+
+  p:last-of-type span
+    font-size: 36px
+    font-weight: 800
+
+  input
+    width: 170px
+    height: 50px
+    background-color: #fed700
+    font-size: 15px
+    font-weight: 800
+    line-height: 50px
+    text-align: center
+    margin-top: 70px
+    border: 0
+    border-radius: 3px
+    text-transform: uppercase
+
+.little_offer_block
+  background-color: #f7f7f7
+  border: 1px solid #e1e1e1
+  height: 230px
+  padding: 28px
+  margin-top: 20px
+  margin-bottom: 30px
+  color: #000
+  transition: 0.3s
+
+  h2
+    font-size: 22px
+    line-height: 24px
+
+  p
+    font-size: 15px
+    line-height: 18px
+
+  &:hover
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28)
+    -moz-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28)
+    box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28)
+
+  .price
+    font-family: "Rubik-bold"
+    position: absolute
+    width: 65px
+    height: 65px
+    background-color: #e80f0f
+    border-radius: 100%
+    font-size: 14px
+    line-height: 20px
+    font-weight: 500
+    color: #fff
+    text-align: center
+    padding-top: 10px
+    margin-top: 120px
+
+  .sale_block_title
+    color: #0363cd
+    margin-top: 20px
+
+  p.ends_in
+    margin-top: 30px
+
+.little_offer_block-first
+  h2
+    margin-top: 100px
+
+  .price
+    margin-left: 230px
+
+.offer a:hover, .products_list_block a:hover
+  text-decoration: none
+
+.products_block
+  margin-top: 20px
+
+  h2.section_title
+    display: inline-block
+    font-family: "Rubik-bold"
+    font-size: 20px
+    line-height: 18px
+    border-bottom: 2px solid #fed700
+    padding-bottom: 15px
+    margin-bottom: 30px
+
+.products_card_wrapper
+  display: flex
+  justify-content: space-between
+
+.product_card
+  width: 190px
+
+  .product_card_img
+    height: 210px
+    background-color: #ebebeb
+    transition: 0.3s
+
+    &:hover
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28)
+      -moz-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28)
+      box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28)
+
+  .product_card_title
+    font-size: 14.1px
+    line-height: 18px
+    color: #0363cd
+    padding-top: 10px
+    margin-bottom: 10px
+
+  // &:hover
+  //   text-decoration: underline
+  //   text-decoration-color: #0363cd
+
+.price
+  font-family: "Rubik-bold"
+  font-size: 16px
+  line-height: 24px
+  font-weight: 500
+  color: #e80f0f
+  float: left
+
+  .old
+    font-family: "Rubik"
+    font-size: 14px
+    font-weight: 400
+    color: #a4a4a4
+    text-decoration: line-through
+    margin-left: 5px
+
+  .sale
+    font-family: "Rubik"
+    font-size: 13px
+    float: right
+    float: left
+
+footer
+  background: #f7f7f7
+  border-top: 1px solid #a4a4a4
+  margin-top: 40px
+  padding-top: 40px
+  font-size: 14px
+  line-height: 24px
+
+  p, a
+    color: #888888
+    font-size: 14px
+
+.advantages
+  text-align: center
+  border-bottom: 1px dashed #a4a4a4
+  padding-bottom: 40px
+
+  .advantages-item
+    transition: 0.5s
+
+    h3
+      font-size: 16px
+      line-height: 34px
+      font-family: "Rubik-bold"
+
+    p
+      font-size: 14px
+      line-height: 18px
+      font-weight: 400
+
+    div
+      width: 64px
+      height: 58px
+      margin: 0 auto
+      background-image: url("../source/img/footer_awards.png")
+
+    &:hover
+      margin-top: -7px
+
+    .img_footer_1
+      background-position-x: 0
+
+    .img_footer_2
+      background-position-x: -80px
+
+    .img_footer_3
+      background-position-x: -150px
+
+    .img_footer_4
+      background-position-x: -210px
+
+.footer_main_content
+  padding: 40px 0 30px
+  margin-bottom: 20px
+  border-bottom: 1px dashed #a4a4a4
+
+  ul
+    padding: 0
+
+    li
+      list-style-type: none
+      line-height: 30px
+
+  .follow_us
+    ul
+      display: flex
+      justify-content: space-around
+
+      li
+        border-radius: 3px
+        width: 41px
+        height: 41px
+        margin-right: 10px
+        text-align: center
+        line-height: 41px
+        transition: 0.3s
+
+        &:hover
+          -webkit-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.55)
+          -moz-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.55)
+          box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.55)
+
+        a
+          color: #fff
+          font-size: 20px
+          display: block
+
+      li:nth-child(1)
+        background-color: #3c5b9b
+
+      li:nth-child(2)
+        background-color: #40c1df
+
+      li:nth-child(3)
+        background-color: #c619b8
+
+      li:nth-child(4)
+        background-color: #ed3c32
+
+      li:nth-child(5)
+        background-color: #3c5b9b
+
+      li:nth-child(6)
+        background-color: #c72982
+
+  .subscribe
+    h4
+      padding: 10px 0 20px
+
+    input
+      padding: 17px
+      width: 60%
+      height: 45px
+      margin: 0
+      border: 0
+
+    button
+      width: 40%
+      height: 45px
+      font-size: 13px
+      font-family: "Rubik-bold"
+      text-transform: uppercase
+
+// Страница товара
+
+.breadcrumbs
+  background: #f9f9f9
+
+  p
+    font-size: 13px
+    line-height: 50px
+    color: #a4a4a4
+    margin: 0 15px
+
+    a
+      color: #242424
+
+.product_image
+  background: #ebebeb
+  height: 100%
+  min-height: 400px
+
+.product_info
+  h1
+    font-size: 18px
+    line-height: 24px
+    color: #0363cd
+    margin-bottom: 30px
+
+  p.price
+    float: none
+    font-size: 24px
+
+  p, li
+    font-size: 14px
+    line-height: 24px
+
+  li
+    list-style-type: none
+
+  li::before
+    content: "•"
+    color: #a4a4a4
+    font-size: 20px
+    margin-right: 5px
+
+  .actions
+    span
+      width: 3%
+
+    input
+      width: 10%
+
+    button
+      width: 70%
+      float: none
+      height: 40px
+      text-transform: uppercase
+      font-size: 17px
+
+    a
+      display: block
+      float: right
+      width: 7%
+      height: 40px
+      background-color: #eef0f1
+      font-size: 16px
+      line-height: 40px
+      color: #a4a4a4
+      text-align: center
+      border-radius: 3px
+
+.product_descriprion
+  font-size: 14px
+  line-height: 30px
+
+  p
+    padding: 10px 0
+
+// Товары
+
+main#shop
+  .options
+    background-color: #f4f4f4
+    border: 1px solid #e1e1e1
+    padding: 20px
+
+    .options_title h1
+      font-weight: bold
+      font-size: 18px
+      line-height: 24px
+
+    ul
+      padding-left: 0
+
+      li
+        list-style-type: none
+        font-size: 14px
+        line-height: 25px
+
+      li.wrap_item
+        line-height: 34px
+
+      li a
+        padding-left: 15px
+        color: #000
+
+    ul.brands li input
+      margin-right: 10px
+
+    hr
+      margin: 20px 0
+
+    button
+      margin: 0 4px 7px 0
+
+    button.btn-black
+      background: #000
+      color: #fff
+
+    button.btn-disable
+      background: #fff
+      color: #afafaf
+
+  .main_offer_block
+    padding: 50px
+
+    h1
+      font-size: 26px
+
+    p span
+      font-size: 24px
+
+  .products_block
+    padding: 0
+
+  .product_card
+    p.price
+      color: #000
+
+    &:hover
+      text-decoration: underline
+      text-decoration-color: #0363cd
+
+  .page_nav
+    border: 1px solid #e9e9e9
+    width: 850px
+    padding: 16px 25px
+    margin-left: -10px
+
+    button
+      margin-right: 8px
+      min-width: 40px
+
+    button.btn-grey
+      background-color: #f1f1f1
+      color: #000
+
+    button.btn-yellow
+      background-color: #fed700
+      color: #000
+
+    span
+      float: right
+      line-height: 40px
+
+// Личный кабинет
+
+.personal_block
+  background-color: #f7f7f7
+  border-radius: 3px
+  padding: 11px
+  margin-bottom: 10px
+
+  h3
+    font-size: 20px
+
+    i
+      color: #1b5adc
+  h3, dl
+    margin-left: 20px
+  ul li
+    list-style-type: none
+    margin-left: -10px
+  button
+    margin-bottom: 5px
+
+// Медиа Запросы
+
+@media (max-width: 576px)
+  .products_card_wrapper
+    flex-direction: column
+    margin: 0 auto
+
+  .product_card
+    width: 100%
+
+  header
+    text-align: center
+    .form, input[type="text"]
+      width: auto
+      margin-bottom: 10px
+    ul
+      display: none
+
+  .addres
+    display: none
+  .nav-link
+    padding: 7px 0
+
+  footer
+    text-align: center

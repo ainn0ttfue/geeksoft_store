@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GeekSoft - Shop</title>
+  <link rel="stylesheet" href="source/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="source/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+  <script src="source/popper.min.js"></script>
+  <script src="source/jquery-3.5.1.min.js"></script>
+  <script src="source/bootstrap.min.js"></script>
+
+  <script>
+    function ChangePrice() {
+      price_num = document.getElementById("price_input").value;
+      price_el = document.getElementById("price_el");
+      price_el.innerText = price_num;
+    }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="header_top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-3">
+            <p class='tel'>Телефонный звонок: <a href="tel:+79129120101">+7 (912) 912-01-01</a></p>
+          </div>
+
+          <div class="col-md-4 offset-5">
+            <ul>
+              <li>Настройки</li>
+              <li>Язык: Русский</li>
+              <li>Курс: USD</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header_mine">
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="logo">
+              <p><a href="index.html">GeekSoft</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form">
+              <div class="dropdown">
+                <button class="search_categories btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Все
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="shop.html">Категория 1</a>
+                  <a class="dropdown-item" href="shop.html">Категория 2</a>
+                  <a class="dropdown-item" href="shop.html">Категория 3</a>
+                </div>
+                <input type="text" name="" placeholder="Обыщите здесь весь магазин...">
+                <a href="shop.html"><button type="button" name="button" class="search"><i class="fa fa-search" aria-hidden="true"></i></button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 usr_links">
+            <a href="personal.html">
+              <div class="item"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+            </a>
+            <a href="personal.html">
+              <div class="item"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+            </a>
+            <a href="personal.html">
+              <div class="item cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span href="#">$609.00</span>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-7">
+          <ul class="nav nav-pills">
+            <li class="nav-item ">
+              <a class="nav-link text-dark" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="shop.html">Магазин</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="https://freelancehunt.com/freelancer/ArtuRus2k.html#portfolio">Портфолио</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="https://vk.com/ainn0ttfue">Блог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#footer">Контакты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5">
+          <p class="addres text-right">
+            <a href="https://2gis.ru/irkutsk/geo/1548748027074315?m=104.301128%2C52.218782%2F16"><i class="fa fa-map-marker" aria-hidden="true"></i> 6688 Россия, Ирк. Область Иркутск Юб. 69 360, RU</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p><a href="#">Главная</a> / Товары</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="shop">
+    <div class="container">
+      <div class="offer">
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="options">
+              <div class="options_title">
+                <h1>Параметры поиска</h1>
+              </div>
+              <hr>
+
+              <ul class="categories">
+                <li class="wrap_item">Ноутбук и компьютер</li>
+                <li><a href="#">Аксессуары</a></li>
+                <li><a href="#">Сумки и чехлы</a></li>
+                <li><a href="#">Бинокль и очки</a></li>
+                <li><a href="#">Цифровые фотоаппараты</a></li>
+                <li><a href="#">Фильм Фотография</a></li>
+                <li class="wrap_item">Гостиная</li>
+                <li class="wrap_item">Мебель для освещения</li>
+                <li class="wrap_item">На открытом воздухе</li>
+                <li class="wrap_item">Планшеты</li>
+                <li class="wrap_item">Аксессуары</li>
+              </ul>
+
+              <hr>
+
+              <div class="options_title">
+                <h1>Сортировать По</h1>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle btn-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Без сортировки
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">По цене</a>
+                  <a class="dropdown-item" href="#">По количеству</a>
+                  <a class="dropdown-item" href="#">По дате появления</a>
+                  <a class="dropdown-item" href="#">По популярности</a>
+
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="options_title">
+                <h1>Фильтр Цены</h1>
+              </div>
+
+              <p>От 0$ до <span id="price_el">450</span>$</p>
+              <input type="range" min="1" max="1000" id="price_input" oninput="ChangePrice()" value="450">
+              <button type="button" class="btn btn-black">Отфильтровать</button>
+
+              <hr>
+
+              <div class="options_title">
+                <h1>По Бренду</h1>
+              </div>
+              <ul class="brands">
+                <li><input type="checkbox">Samsung</li>
+                <li><input type="checkbox">Panasonic</li>
+                <li><input type="checkbox">Electrolux</li>
+                <li><input type="checkbox">LG</li>
+                <li><input type="checkbox">Calvin Klein</li>
+                <li><input type="checkbox">Diesel</li>
+                <li><input type="checkbox">Polo</li>
+                <li><input type="checkbox">Tommy Hilfiger</li>
+              </ul>
+
+              <hr>
+
+              <div class="options_title">
+                <h1>По Цвету</h1>
+              </div>
+              <ul class="brands">
+                <li><input type="checkbox">Черный</li>
+                <li><input type="checkbox">Синий</li>
+                <li><input type="checkbox">Зеленый</li>
+                <li><input type="checkbox">Серый</li>
+                <li><input type="checkbox">Красный</li>
+                <li><input type="checkbox">Белый</li>
+                <li><input type="checkbox">Желтый</li>
+              </ul>
+
+              <hr>
+
+              <div class="options_title">
+                <h1>Популярные Теги</h1>
+              </div>
+              <button type="button" class="btn btn-black">Компьютер</button>
+              <button type="button" class="btn btn-disable">Камеры</button>
+              <button type="button" class="btn btn-disable">Аксессуары</button>
+              <button type="button" class="btn btn-disable">Скидки</button>
+              <button type="button" class="btn btn-disable">Sony</button>
+              <button type="button" class="btn btn-disable">Devita</button>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <div class="row">
+              <div class="main_offer_block">
+                <h1>Самые популярные
+                  <br>Наушники 2k20</h1>
+                <p>Стартует с <span class="text-danger">$1209.00</span></p>
+              </div>
+
+              <div class="container-fluid products_block ">
+                <div class="row products_list_block">
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                    <div class="product_card col-md-3">
+                      <a href="details.html">
+                        <div class="product_card_img"></div>
+                        <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                        <p class="price text-black">$260.00</p>
+                      </a>
+                    </div>
+
+                </div>
+              </div>
+
+              <div class="col-md-9">
+                <div class="page_nav">
+                  <div class="buttons">
+                    <button type="button" class="btn btn-grey">Предыдущая</button>
+                    <button type="button" class="btn btn-yellow">1</button>
+                    <button type="button" class="btn btn-grey">2</button>
+                    <button type="button" class="btn btn-grey">3</button>
+                    <button type="button" class="btn btn-grey">...</button>
+                    <button type="button" class="btn btn-grey">10</button>
+                    <button type="button" class="btn btn-yellow">Следущая</button>
+                    <span>Показано 1 - 16 из 30 результатов</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="advantages">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="advantages-item">
+              <div class="img_footer_1"></div>
+              <h3>Бесплатная доставка</h3>
+              <p>И бесплатное возвращение. Даты доставки указаны на кассе.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="advantages-item">
+              <div class="img_footer_2"></div>
+              <h3>Безопасная оплата</h3>
+              <p>Оплачивайте с помощью самых популярных и безопасных в мире способов оплаты.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="advantages-item">
+              <div class="img_footer_3"></div>
+              <h3>Конфиденциальность</h3>
+              <p>Наша Защита Покупателей покрывает Вашу покупку от щелчка мыши до поставки.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="advantages-item">
+              <div class="img_footer_4"></div>
+              <h3>Поддержка 24/7</h3>
+              <p>У тебя есть вопрос? Позвоните специалисту или пообщайтесь в чате онлайн.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_main_content">
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="footer_main_info">
+              <div class="logo">
+                <p><a href="index.html">GeekSoft</a></p>
+              </div>
+              <p>Мы команда дизайнеров и разработчиков, которые создают высококачественные Magento, Prestashop, Opencart.</p>
+              <div class="footer_address">
+                <p><b>Адрес: </b><a href="https://2gis.ru/irkutsk/geo/1548748027074315?m=104.301128%2C52.218782%2F16">6688 Россия, Ирк. Область Иркутск Юб. 69 360, RU</a></p>
+                <p><b>Телефон: </b><a href="tel:+79129120101">+7 (912) 912-01-01</a></p>
+                <p><b>Email: </b><a href="mailto:ilinartur2@gmail.com">ilinartur2@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h4>Информация</h4>
+            <ul>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Информация о доставке</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Положения и условия</a></li>
+              <li><a href="#">Служба поддержки</a></li>
+              <li><a href="#">Политика возврата</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 footer_my_account">
+            <h4>Мой Аккаут</h4>
+            <ul>
+              <li><a href="#">Мой Аккаунт</a></li>
+              <li><a href="#">История заказов</a></li>
+              <li><a href="#">Список желаний</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">История заказов</a></li>
+              <li><a href="#">Международные заказы</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 social">
+            <div class="follow_us">
+              <h4>Присоединяйтесь</h4>
+              <ul>
+                <li><a href="https://ru-ru.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://plus.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="https://vk.com/"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                <li><a href="https://dribbble.com/"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+            <div class="subscribe">
+              <h4>Подпишитесь на рассылку</h4>
+              <div class="form">
+                <input type="text" name="" placeholder="Введите здесь свой Email...">
+                <button type="button" name="button" class="search"><b>Подписаться</b></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md copy text-center">
+        <p>Copyright &copy; 2020 <a href="index.html">GeekSoft</a>. All Right Reserved.</p>
+      </div>
+
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>
