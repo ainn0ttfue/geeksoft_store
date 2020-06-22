@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="container">
+            <h1>Личный кабинет</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="personal_block">
+                        <h3><i class="fa fa-user-circle" aria-hidden="true"></i> Персональная информация</h3>
+                        <hr>
+                        <dl>
+                            <dt>Фамилия, Имя:</dt>
+                            <dd>Иван Иванов</dd>
+                            <dt>Email:</dt>
+                            <dd>example@gmail.com</dd>
+                            <dt>Телефон:</dt>
+                            <dd>+7 (914) 912-12-34</dd>
+                        </dl>
+                        <button type="button" class="btn btn-secondary">Изменить данные</button>
+                        <button type="button" class="btn btn-secondary">Изменить пароль</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="personal_block">
+                        <h3><i class="fa fa-archive" aria-hidden="true"></i>
+                            Профили доставок</h3>
+                        <hr>
+                        <ul>
+                            <li>
+                                <p>Иркутск Правобережный Ленина дом 14 кв 17</p>
+                                <p><a href="#">Изменить</a> <a href="#">Удалить Адрес</a></p>
+                            </li>
+                            <li>
+                                <p>Иркутск Правобережный Горького дом 1 кв 6</p>
+                                <p><a href="#">Изменить</a> <a href="#">Удалить Адрес</a></p>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-secondary">Добавить Адрес</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="personal_block">
+                        <h3><i class="fa fa-list-alt" aria-hidden="true"></i>
+                            Заказы</h3>
+                        <hr>
+                        <ul>
+                            <li>
+                                <p><a href="#">Заказ №12345</a></p>
+                                <p>$3 574 - В обработке</p>
+                            </li>
+                            <li>
+                                <p><a href="#">Заказ №54321</a></p>
+                                <p>$12 200 - В обработке</p>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-secondary">Показать все заказы</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="products_block">
+                <h2 class="section_title">Товары в корзине</h2>
+                <div class="row products_list_block">
+                    <div class="products_card_wrapper">
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                 <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                 <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products_block">
+                <h2 class="section_title">Понравивишеся товары</h2>
+                <div class="row products_list_block">
+                    <div class="products_card_wrapper">
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                 <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                 <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                 <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="product_card">
+                                <a href="/details/">
+                                    <div class="product_card_img"></div>
+                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
+                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
