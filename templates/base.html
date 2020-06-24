@@ -56,20 +56,10 @@
                 <div class="col-md-6">
                     <div class="form">
                         <div class="dropdown">
-                            <button class="search_categories btn  dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Все
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="/shop/">Категория 1</a>
-                                <a class="dropdown-item" href="/shop/">Категория 2</a>
-                                <a class="dropdown-item" href="/shop/">Категория 3</a>
-                            </div>
-                            <input type="text" name="" placeholder="Обыщите здесь весь магазин...">
-                            <a href="/shop/">
-                                <button type="button" name="button" class="search"><i class="fa fa-search"
-                                                                                      aria-hidden="true"></i></button>
-                            </a>
+                            <form action="/shop?text=hello" id="search">
+                                <input type="text" name="text" placeholder="Обыщите здесь весь магазин...">
+                                <button type="submit" class="search" form="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
                         </div>
                     </div>
                 </div>

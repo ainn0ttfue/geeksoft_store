@@ -11,9 +11,17 @@ personal_info = {}
 app = Flask(__name__)
 
 
-
 @app.route('/')
 def main():
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
+    cur.execute('''select title, image_url, price from products;''')
+    products = []
+    for item in cur.fetchall():
+        products.append(list(item))
+    shuffle(products)
+    context.update({'products': products})
+    conn.close()
     return render_template("index.html", **context)
 
 
@@ -21,8 +29,12 @@ def main():
 def shop():
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
-    cur.execute(
-        '''select title, image_url, price, count, mini_description, specifications, description from products;''')
+    if request.args.get('text'):
+        execute = "select title, image_url, price from products WHERE title like '%" + (request.args.get('text')).lower() + "%' " \
+                  "union select title, image_url, price from products WHERE title like '%" + (request.args.get('text')).title() + "%';"
+        cur.execute(execute)
+    else:
+        cur.execute('''select title, image_url, price from products;''')
     products = []
     for item in cur.fetchall():
         products.append(list(item))
@@ -36,7 +48,7 @@ def shop():
 @app.route('/personal/')
 def personal():
     if not context.get('Name'):
-        return redirect("http://localhost:5000/login/", code=302)
+        return redirect("/login/", code=302)
 
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
@@ -50,14 +62,22 @@ def personal():
         'email': email,
         'phone': phone
     })
+
+    cur.execute('''select title, image_url, price from products;''')
+    products = []
+    for item in cur.fetchall():
+        products.append(list(item))
+    shuffle(products)
+    context.update({'products': products})
     conn.close()
-    print()
 
     return render_template("personal.html", **context, **personal_info)
 
 
 @app.route('/details/')
 def details():
+    if not request.args.get('title'):
+        return redirect("/shop/", code=302)
     product_title = request.args.get('title')
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
@@ -74,7 +94,7 @@ def details():
 @app.route('/logout/')
 def logout():
     context.update({'login': '', 'Name': ''})
-    return redirect("http://localhost:5000/login/", code=302)
+    return redirect("/login/", code=302)
 
 
 @app.route('/signup/', methods=['POST', 'GET'])

@@ -126,9 +126,7 @@
                                         {% for product in products %}
                                             <div class="product_card col-md-3">
                                                 <a href="/details?title={{ product[0] }}">
-                                                    <div class="product_card_img"
-                                                         style="background-image: url({{ product[1] }})">
-
+                                                    <div class="product_card_img" style="background-image: url({{ product[1] }})">
                                                     </div>
                                                     <p class="product_card_title">{{ product[0][:46] }}...</p>
                                                     <p class="price text-black">&dollar;{{ product[2] }}0</p>

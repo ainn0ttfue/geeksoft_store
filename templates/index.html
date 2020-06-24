@@ -9,7 +9,6 @@
         <div class="container">
             <div class="offer">
                 <div class="row">
-
                     <div class="col-md-3">
                         <div class="categories">
                             <div class="categories_title text-uppercase">
@@ -32,7 +31,6 @@
                                     </li>
                                 </ul>
                             </div>
-
                         </div>
                     </div>
 
@@ -78,13 +76,11 @@
                                 <div class="price">
                                     От<br>$99
                                 </div>
-                                <h2>Samsung
-                                    <br>Galaxy S9/S9+</h2>
+                                <h2>Samsung <br>Galaxy S9/S9+</h2>
                                 <p>Камера. Инновация</p>
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
 
@@ -94,59 +90,19 @@
                 <div class="row products_list_block">
                     <!-- slider -->
                     <div class="products_card_wrapper">
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
+                        {% for product in products[:5] %}
+                            <div class="col-md-2">
+                                <div class="product_card ">
+                                    <a href="/details?title={{ product[0] }}">
+                                        <div class="product_card_img"
+                                             style="background-image: url({{ product[1] }})"></div>
+                                        <p class="product_card_title">{{ product[0][:46] }}...</p>
+                                        <p class="price text-black">&dollar;{{ product[2] }}0</p>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
-
                     <!-- end slider -->
                 </div>
             </div>
@@ -156,9 +112,8 @@
                 <h2 class="section_title">Компьютеры и Ноутбуки</h2>
                 <div class="row products_list_block">
                     <!-- slider -->
-
                     <div class="col-md-6">
-                         <a href="/details/">
+                        <a href="/details/">
                             <div class="little_offer_block">
                                 <p class="sale_block_title">Большая распродажа 2020</p>
                                 <h2>Ноутбук, Планшет
@@ -167,7 +122,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div class="col-md-6">
                         <a href="/details/">
                             <div class="little_offer_block">
@@ -180,59 +134,19 @@
                     </div>
 
                     <div class="products_card_wrapper">
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
+                        {% for product in products[:5] %}
+                            <div class="col-md-2">
+                                <div class="product_card ">
+                                    <a href="/details?title={{ product[0] }}">
+                                        <div class="product_card_img"
+                                             style="background-image: url({{ product[1] }})"></div>
+                                        <p class="product_card_title">{{ product[0][:46] }}...</p>
+                                        <p class="price text-black">&dollar;{{ product[2] }}0</p>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
-
                     <!-- end slider -->
                 </div>
             </div>
@@ -241,9 +155,8 @@
             <div class="products_block">
                 <h2 class="section_title">Телефоны и Планшеты</h2>
                 <div class="row products_list_block">
-
                     <div class="col-md-6">
-                       <a href="/details/">
+                        <a href="/details/">
                             <div class="little_offer_block">
                                 <p class="sale_block_title">Большая распродажа 2020</p>
                                 <h2>Ноутбук, Планшет
@@ -252,7 +165,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div class="col-md-6">
                         <a href="/details/">
                             <div class="little_offer_block">
@@ -265,57 +177,18 @@
                     </div>
 
                     <div class="products_card_wrapper">
-                        <div class="col-md-2">
-                            <div class="product_card">
-                               <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
+                        {% for product in products[:5] %}
+                            <div class="col-md-2">
+                                <div class="product_card ">
+                                    <a href="/details?title={{ product[0] }}">
+                                        <div class="product_card_img"
+                                             style="background-image: url({{ product[1] }})"></div>
+                                        <p class="product_card_title">{{ product[0][:46] }}...</p>
+                                        <p class="price text-black">&dollar;{{ product[2] }}0</p>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -324,7 +197,16 @@
             <div class="products_block">
                 <h2 class="section_title">ТВ и Аудио</h2>
                 <div class="row products_list_block">
-
+                    <div class="col-md-6">
+                        <a href="/details/">
+                            <div class="little_offer_block">
+                                <p class="sale_block_title">Большая распродажа 2020</p>
+                                <h2>Ноутбук, Планшет
+                                    <br>и другое...</h2>
+                                <p class="ends_in">Большая распродажа заканчивается 8/10/2020</p>
+                            </div>
+                        </a>
+                    </div>
                     <div class="col-md-6">
                         <a href="/details/">
                             <div class="little_offer_block">
@@ -336,69 +218,19 @@
                         </a>
                     </div>
 
-                    <div class="col-md-6">
-                       <a href="/details/">
-                            <div class="little_offer_block">
-                                <p class="sale_block_title">Большая распродажа 2020</p>
-                                <h2>Ноутбук, Планшет
-                                    <br>и другое...</h2>
-                                <p class="ends_in">Большая распродажа заканчивается 8/10/2020</p>
-                            </div>
-                        </a>
-                    </div>
-
                     <div class="products_card_wrapper">
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
+                        {% for product in products[:5] %}
+                            <div class="col-md-2">
+                                <div class="product_card ">
+                                    <a href="/details?title={{ product[0] }}">
+                                        <div class="product_card_img"
+                                             style="background-image: url({{ product[1] }})"></div>
+                                        <p class="product_card_title">{{ product[0][:46] }}...</p>
+                                        <p class="price text-black">&dollar;{{ product[2] }}0</p>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                               <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                               <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -407,10 +239,9 @@
             <div class="big_offer row">
                 <div class="main_offer_block col">
                     <p>Скидка -20% На этой неделе</p>
-                    <h1>Попоулярный продукт
-                        <br>Аксессуары Apple 2020</h1>
+                    <h1>Попоулярный продукт <br> Аксессуары Apple 2020</h1>
                     <p>Начинается от <span class="text-danger">$1209.00</span></p>
-                     <a href="/details/"><input type="submit" name="" value="Купить сейчас"></a>
+                    <a href="/details/"><input type="submit" name="" value="Купить сейчас"></a>
                 </div>
             </div>
 
@@ -419,57 +250,18 @@
                 <h2 class="section_title">Лучшие скидки на аксессуары</h2>
                 <div class="row products_list_block">
                     <div class="products_card_wrapper">
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
+                        {% for product in products[:5] %}
+                            <div class="col-md-2">
+                                <div class="product_card ">
+                                    <a href="/details?title={{ product[0] }}">
+                                        <div class="product_card_img"
+                                             style="background-image: url({{ product[1] }})"></div>
+                                        <p class="product_card_title">{{ product[0][:46] }}...</p>
+                                        <p class="price text-black">&dollar;{{ product[2] }}0</p>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="product_card">
-                                 <a href="/details/">
-                                    <div class="product_card_img"></div>
-                                    <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB Джойстик...</p>
-                                    <p class="price">$260.00 <span class="old">$162.00</span> <span class="sale">-10% Скидка</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
