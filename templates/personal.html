@@ -15,11 +15,11 @@
                         <hr>
                         <dl>
                             <dt>Фамилия, Имя:</dt>
-                            <dd>Иван Иванов</dd>
+                            <dd>{{firt_name}} {{second_name}}</dd>
                             <dt>Email:</dt>
-                            <dd>example@gmail.com</dd>
+                            <dd>{{ email}}</dd>
                             <dt>Телефон:</dt>
-                            <dd>+7 (914) 912-12-34</dd>
+                            <dd>{{ phone }}</dd>
                         </dl>
                         <button type="button" class="btn btn-secondary">Изменить данные</button>
                         <button type="button" class="btn btn-secondary">Изменить пароль</button>
@@ -62,8 +62,13 @@
                         </ul>
                         <button type="button" class="btn btn-secondary">Показать все заказы</button>
                     </div>
-
                 </div>
+
+                {% if Name %}
+                    <div class="col">
+                        <a href="/logout/" class="text-danger">Выйти</a>
+                    </div>
+                {% endif %}
             </div>
 
             <div class="products_block">

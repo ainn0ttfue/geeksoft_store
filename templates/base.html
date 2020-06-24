@@ -75,12 +75,15 @@
                 </div>
 
                 <div class="col-md-3 usr_links">
-                    <a href="/personal/">
-                        <div class="item"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
-                    </a>
-                    <a href="/personal/">
-                        <div class="item"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-                    </a>
+                    {% if Name %}
+                        <a href="/personal/">
+                            <div class="item">{{Name}}</div>
+                        </a>
+                    {% else %}
+                        <a href="/login/">
+                            <div class="item">Войти</div>
+                        </a>
+                    {% endif %}
                     <a href="/personal/">
                         <div class="item cart">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>

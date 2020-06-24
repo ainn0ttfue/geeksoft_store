@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block breadcrumbs %}
+
+{% endblock %}
+
+{% block main %}
+    <main id="signup">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Вход</h1>
+                    <form action="/login/" method="post">
+                        <p><label>
+                            Введите Email <br> <input type="email" name="email" placeholder="example@gmail.com">
+                        </label></p>
+
+                        <p><label>
+                            Введите Пароль <br> <input type="password" name="password" placeholder="Пароль">
+                        </label></p>
+
+                        <p><input type="submit" value="Войти"></p>
+
+                        <p>Еще нет Аккаунта? <a href="/signup/">Регистрация</a></p>
+                    </form>
+                    <p>{{ login_alert|safe }}</p>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
