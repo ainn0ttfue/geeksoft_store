@@ -290,8 +290,11 @@ main
 
   .product_card_img
     height: 210px
-    background-color: #ebebeb
+    //background-color: #ebebeb
     transition: 0.3s
+    background-size: 190px
+    background-position: center
+    background-repeat: no-repeat
 
     &:hover
       -webkit-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28)
@@ -305,9 +308,9 @@ main
     padding-top: 10px
     margin-bottom: 10px
 
-  // &:hover
-  //   text-decoration: underline
-  //   text-decoration-color: #0363cd
+// &:hover
+//   text-decoration: underline
+//   text-decoration-color: #0363cd
 
 .price
   font-family: "Rubik-bold"
@@ -469,9 +472,11 @@ footer
       color: #242424
 
 .product_image
-  background: #ebebeb
+  background-color: #ebebeb
   height: 100%
   min-height: 400px
+  background-size: cover
+  background-position-x: center
 
 .product_info
   h1
@@ -630,11 +635,14 @@ main#shop
 
     i
       color: #1b5adc
+
   h3, dl
     margin-left: 20px
+
   ul li
     list-style-type: none
     margin-left: -10px
+
   button
     margin-bottom: 5px
 
@@ -659,9 +667,11 @@ main#shop
 
   header
     text-align: center
+
     .form, input[type="text"]
       width: auto
       margin-bottom: 10px
+
     ul
       display: none
 

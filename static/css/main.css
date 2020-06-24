@@ -259,8 +259,10 @@ main {
   width: 190px; }
   .product_card .product_card_img {
     height: 210px;
-    background-color: #ebebeb;
-    transition: 0.3s; }
+    transition: 0.3s;
+    background-size: 190px;
+    background-position: center;
+    background-repeat: no-repeat; }
     .product_card .product_card_img:hover {
       -webkit-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28);
       -moz-box-shadow: 0px 0px 30px 0px rgba(49, 50, 50, 0.28);
@@ -399,9 +401,11 @@ footer {
       color: #242424; }
 
 .product_image {
-  background: #ebebeb;
+  background-color: #ebebeb;
   height: 100%;
-  min-height: 400px; }
+  min-height: 400px;
+  background-size: cover;
+  background-position-x: center; }
 
 .product_info h1 {
   font-size: 18px;

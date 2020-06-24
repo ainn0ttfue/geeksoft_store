@@ -1,6 +1,7 @@
 from flask import Flask, request, redirect, render_template
 import sqlite3
 import os.path
+from random import shuffle
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 db_path = os.path.join(BASE_DIR, "db.sqlite")
@@ -10,6 +11,7 @@ personal_info = {}
 app = Flask(__name__)
 
 
+
 @app.route('/')
 def main():
     return render_template("index.html", **context)
@@ -17,6 +19,17 @@ def main():
 
 @app.route('/shop/')
 def shop():
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        '''select title, image_url, price, count, mini_description, specifications, description from products;''')
+    products = []
+    for item in cur.fetchall():
+        products.append(list(item))
+    shuffle(products)
+    context.update({'products': products})
+    conn.close()
+    print(products)
     return render_template("shop.html", **context)
 
 
@@ -30,9 +43,7 @@ def personal():
     cur.execute('''select first_name, second_name, email, phone from users where email = ?;''',
                 (context.get('login'),))
     pers_tuple = cur.fetchall()[0]
-    print(pers_tuple)
     first_name, second_name, email, phone = pers_tuple[0], pers_tuple[1], pers_tuple[2], pers_tuple[3]
-    print(second_name)
     personal_info.update({
         'first_name': first_name,
         'second_name': second_name,
@@ -40,12 +51,23 @@ def personal():
         'phone': phone
     })
     conn.close()
+    print()
 
     return render_template("personal.html", **context, **personal_info)
 
 
 @app.route('/details/')
 def details():
+    product_title = request.args.get('title')
+    conn = sqlite3.connect(db_path)
+    cur = conn.cursor()
+    cur.execute(
+        '''select image_url, price, count, mini_description, specifications, description from products where title = ?;''',
+        (product_title,))
+    product_info = list(cur.fetchall()[0])
+    product_info.insert(0, product_title)
+    context.update({'current_product': product_info})
+    conn.close()
     return render_template("details.html", **context)
 
 
@@ -106,6 +128,11 @@ def login():
         context.update({'login_alert': ''})
 
     return render_template("login.html", **context)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 
 if __name__ == '__main__':

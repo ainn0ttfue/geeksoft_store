@@ -54,9 +54,6 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#">По цене</a>
                                     <a class="dropdown-item" href="#">По количеству</a>
-                                    <a class="dropdown-item" href="#">По дате появления</a>
-                                    <a class="dropdown-item" href="#">По популярности</a>
-
                                 </div>
                             </div>
 
@@ -125,151 +122,20 @@
 
                             <div class="container-fluid products_block ">
                                 <div class="row products_list_block">
+                                    {% for _ in range(2) %}
+                                        {% for product in products %}
+                                            <div class="product_card col-md-3">
+                                                <a href="/details?title={{ product[0] }}">
+                                                    <div class="product_card_img"
+                                                         style="background-image: url({{ product[1] }})">
 
-                                    <div class="product_card col-md-3">
-                                         <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                        <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                        <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                         <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                        <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                        <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                         <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                       <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                       <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                        <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                         <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                         <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                        <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                        <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                        <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
-                                    <div class="product_card col-md-3">
-                                         <a href="/details/">
-                                            <div class="product_card_img"></div>
-                                            <p class="product_card_title">Игровой Контроллер TGJOR Проводной USB
-                                                Джойстик...</p>
-                                            <p class="price text-black">$260.00</p>
-                                        </a>
-                                    </div>
-
+                                                    </div>
+                                                    <p class="product_card_title">{{ product[0][:46] }}...</p>
+                                                    <p class="price text-black">&dollar;{{ product[2] }}0</p>
+                                                </a>
+                                            </div>
+                                        {% endfor %}
+                                    {% endfor %}
                                 </div>
                             </div>
 
