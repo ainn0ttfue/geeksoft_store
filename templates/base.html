@@ -57,7 +57,7 @@
                     <div class="form">
                         <div class="dropdown">
                             <form action="/shop?text=hello" id="search">
-                                <input type="text" name="text" placeholder="Обыщите здесь весь магазин...">
+                                <input type="text" name="text" placeholder="Обыщите здесь весь магазин..." {% if search_text != ' ' %} value='{{ search_text }}' {% endif %}>
                                 <button type="submit" class="search" form="search"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </div>

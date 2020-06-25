@@ -26,17 +26,9 @@
                             <hr>
 
                             <ul class="categories">
-                                <li class="wrap_item">Ноутбук и компьютер</li>
-                                <li><a href="#">Аксессуары</a></li>
-                                <li><a href="#">Сумки и чехлы</a></li>
-                                <li><a href="#">Бинокль и очки</a></li>
-                                <li><a href="#">Цифровые фотоаппараты</a></li>
-                                <li><a href="#">Фильм Фотография</a></li>
-                                <li class="wrap_item">Гостиная</li>
-                                <li class="wrap_item">Мебель для освещения</li>
-                                <li class="wrap_item">На открытом воздухе</li>
-                                <li class="wrap_item">Планшеты</li>
-                                <li class="wrap_item">Аксессуары</li>
+                                {% for item in categories %}
+                                    <li><a href="/shop?category={{item}}">{{item}}</a></li>
+                                {% endfor %}
                             </ul>
 
                             <hr>
@@ -45,70 +37,56 @@
                                 <h1>Сортировать По</h1>
                             </div>
 
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle btn-light" type="button"
-                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                    Без сортировки
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">По цене</a>
-                                    <a class="dropdown-item" href="#">По количеству</a>
+                            <form action="/shop/" method="post" id="filters">
+                                <p><select name="sort_price">
+                                    <option selected value=" ">По возрастанию цены</option>
+                                    <option value="desc">По Убыванию цены</option>
+                                </select></p>
+
+                                <hr>
+
+                                <div class="options_title">
+                                    <h1>Фильтр Цены</h1>
                                 </div>
-                            </div>
+                                <p>От 0&dollar; до <span id="price_el">{{ max_value }}</span>&dollar;</p>
+                                <input type="range" min="1" max="1000" id="price_input" oninput="ChangePrice()"
+                                       value="{{ max_value }}" name="max_value_count">
 
-                            <hr>
+                                <hr>
 
-                            <div class="options_title">
-                                <h1>Фильтр Цены</h1>
-                            </div>
+                                <div class="options_title">
+                                    <h1>По Бренду</h1>
+                                </div>
+                                <ul class="brands">
+                                    <li><input type="checkbox">Samsung</li>
+                                    <li><input type="checkbox">Panasonic</li>
+                                    <li><input type="checkbox">Electrolux</li>
+                                    <li><input type="checkbox">LG</li>
+                                    <li><input type="checkbox">Calvin Klein</li>
+                                    <li><input type="checkbox">Diesel</li>
+                                    <li><input type="checkbox">Polo</li>
+                                    <li><input type="checkbox">Tommy Hilfiger</li>
+                                </ul>
 
-                            <p>От 0$ до <span id="price_el">450</span>$</p>
-                            <input type="range" min="1" max="1000" id="price_input" oninput="ChangePrice()" value="450">
-                            <button type="button" class="btn btn-black">Отфильтровать</button>
+                                <hr>
 
-                            <hr>
+                                <div class="options_title">
+                                    <h1>По Цвету</h1>
+                                </div>
+                                <ul class="brands">
+                                    <li><input type="checkbox">Черный</li>
+                                    <li><input type="checkbox">Синий</li>
+                                    <li><input type="checkbox">Зеленый</li>
+                                    <li><input type="checkbox">Серый</li>
+                                    <li><input type="checkbox">Красный</li>
+                                    <li><input type="checkbox">Белый</li>
+                                    <li><input type="checkbox">Желтый</li>
+                                </ul>
 
-                            <div class="options_title">
-                                <h1>По Бренду</h1>
-                            </div>
-                            <ul class="brands">
-                                <li><input type="checkbox">Samsung</li>
-                                <li><input type="checkbox">Panasonic</li>
-                                <li><input type="checkbox">Electrolux</li>
-                                <li><input type="checkbox">LG</li>
-                                <li><input type="checkbox">Calvin Klein</li>
-                                <li><input type="checkbox">Diesel</li>
-                                <li><input type="checkbox">Polo</li>
-                                <li><input type="checkbox">Tommy Hilfiger</li>
-                            </ul>
+                                <hr>
 
-                            <hr>
-
-                            <div class="options_title">
-                                <h1>По Цвету</h1>
-                            </div>
-                            <ul class="brands">
-                                <li><input type="checkbox">Черный</li>
-                                <li><input type="checkbox">Синий</li>
-                                <li><input type="checkbox">Зеленый</li>
-                                <li><input type="checkbox">Серый</li>
-                                <li><input type="checkbox">Красный</li>
-                                <li><input type="checkbox">Белый</li>
-                                <li><input type="checkbox">Желтый</li>
-                            </ul>
-
-                            <hr>
-
-                            <div class="options_title">
-                                <h1>Популярные Теги</h1>
-                            </div>
-                            <button type="button" class="btn btn-black">Компьютер</button>
-                            <button type="button" class="btn btn-disable">Камеры</button>
-                            <button type="button" class="btn btn-disable">Аксессуары</button>
-                            <button type="button" class="btn btn-disable">Скидки</button>
-                            <button type="button" class="btn btn-disable">Sony</button>
-                            <button type="button" class="btn btn-disable">Devita</button>
+                                <button class="btn btn-black" type="submit" form="filters">Применить фильтры</button>
+                            </form>
                         </div>
                     </div>
 
@@ -122,17 +100,16 @@
 
                             <div class="container-fluid products_block ">
                                 <div class="row products_list_block">
-                                    {% for _ in range(2) %}
-                                        {% for product in products %}
-                                            <div class="product_card col-md-3">
-                                                <a href="/details?title={{ product[0] }}">
-                                                    <div class="product_card_img" style="background-image: url({{ product[1] }})">
-                                                    </div>
-                                                    <p class="product_card_title">{{ product[0][:46] }}...</p>
-                                                    <p class="price text-black">&dollar;{{ product[2] }}0</p>
-                                                </a>
-                                            </div>
-                                        {% endfor %}
+                                    {% for product in products[:16] %}
+                                        <div class="product_card col-md-3">
+                                            <a href="/details?title={{ product[0] }}">
+                                                <div class="product_card_img"
+                                                     style="background-image: url({{ product[1] }})">
+                                                </div>
+                                                <p class="product_card_title">{{ product[0][:46] }}...</p>
+                                                <p class="price text-black">&dollar;{{ product[2] }}0</p>
+                                            </a>
+                                        </div>
                                     {% endfor %}
                                 </div>
                             </div>
@@ -147,7 +124,7 @@
                                         <button type="button" class="btn btn-grey">...</button>
                                         <button type="button" class="btn btn-grey">10</button>
                                         <button type="button" class="btn btn-yellow">Следущая</button>
-                                        <span>Показано 1 - 16 из 30 результатов</span>
+                                        <span>Показано {{ products|length }} из 30 результатов</span>
                                     </div>
                                 </div>
                             </div>

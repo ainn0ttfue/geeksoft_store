@@ -16,14 +16,9 @@
                             </div>
                             <div class="categories_list">
                                 <ul>
-                                    <li><a href="/shop/">Телевидение и Аудио</a></li>
-                                    <li><a href="/shop/">Компьютер и сети</a></li>
-                                    <li><a href="/shop/">Мобильные и планшетные компьютеры</a></li>
-                                    <li><a href="/shop/">Камеры и видеокодеры</a></li>
-                                    <li><a href="/shop/">Наушники и спикеры</a></li>
-                                    <li><a href="/shop/">Фильмы и видеоигры</a></li>
-                                    <li><a href="/shop/">Смартчасы</a></li>
-                                    <li><a href="/shop/">Аксессуары</a></li>
+                                    {% for item in categories %}
+                                        <li><a href="/shop?category={{ item }}">{{ item }}</a></li>
+                                    {% endfor %}
                                     <li>
                                         <div class="categories_more">
                                             <a href="/shop/">+ Больше Категорий</a>

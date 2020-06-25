@@ -21,27 +21,63 @@ def main():
         products.append(list(item))
     shuffle(products)
     context.update({'products': products})
+
+    # Вывод категорий товаров
+    cur.execute("select title from categories;")
+    categories_list = []
+    for item in cur.fetchall():
+        categories_list.append(item[0])
+    context.update({'categories': categories_list})
+
     conn.close()
     return render_template("index.html", **context)
 
 
-@app.route('/shop/')
+@app.route('/shop/', methods=['POST', 'GET'])
 def shop():
+    if request.method == 'POST':
+        # Фильтр - крайний порог цены
+        context.update({'max_value': request.form.get('max_value_count')})
+        # Фильтр - цена по возрастанию или убыванию
+        sort_price = request.form.get('sort_price')
+    else:
+        context.update({'max_value': 960})
+        sort_price = ''
+
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
+
     if request.args.get('text'):
-        execute = "select title, image_url, price from products WHERE title like '%" + (request.args.get('text')).lower() + "%' " \
-                  "union select title, image_url, price from products WHERE title like '%" + (request.args.get('text')).title() + "%';"
-        cur.execute(execute)
+        context.update({'search_text': request.args.get('text')})
     else:
-        cur.execute('''select title, image_url, price from products;''')
+        context.update({'search_text': ' '})
+
+    execute = "select title, image_url, price, id from products WHERE price <= " + str(context.get('max_value')) + " union select title, image_url, price, id from products WHERE price <= " + str(context.get('max_value')) + " order by price " + sort_price + " ;"
+    cur.execute(execute)
+
     products = []
     for item in cur.fetchall():
         products.append(list(item))
-    shuffle(products)
+
+    products = [item for item in products if context.get('search_text').lower() in item[0] or context.get('search_text').title() in item[0]]
+
+    # Вывод категорий товаров
+    cur.execute("select title from categories;")
+    categories_list = []
+    for item in cur.fetchall():
+        categories_list.append(item[0])
+    context.update({'categories': categories_list})
+
+    if request.args.get('category'):
+        cur.execute("""select product_id from categories_products where cat_id = (select id from categories where title = ?);""", (request.args.get('category'),))
+        sort_categories = []
+        for item in cur.fetchall():
+            sort_categories.append(item[0])
+
+        products = [item for item in products if item[3] in sort_categories]
     context.update({'products': products})
     conn.close()
-    print(products)
+
     return render_template("shop.html", **context)
 
 
