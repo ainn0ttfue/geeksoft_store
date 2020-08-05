@@ -3,8 +3,10 @@ import sqlite3
 import os.path
 from random import shuffle
 
+# Путь для подключения базы данных
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 db_path = os.path.join(BASE_DIR, "db.sqlite")
+
 context = {}
 personal_info = {}
 
@@ -15,6 +17,8 @@ app = Flask(__name__)
 def main():
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
+
+    # Вывод товаров
     cur.execute('''select title, image_url, price from products;''')
     products = []
     for item in cur.fetchall():
@@ -47,6 +51,7 @@ def shop():
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
 
+    # Если пользоавтель ввел запрос в строку поиска
     if request.args.get('text'):
         context.update({'search_text': request.args.get('text')})
     else:
@@ -59,6 +64,7 @@ def shop():
     for item in cur.fetchall():
         products.append(list(item))
 
+    # Исключение товаров, в которых нет ключевых слов из поискового запроса
     products = [item for item in products if context.get('search_text').lower() in item[0] or context.get('search_text').title() in item[0]]
 
     # Вывод категорий товаров
@@ -68,12 +74,14 @@ def shop():
         categories_list.append(item[0])
     context.update({'categories': categories_list})
 
+    # Если пользователь открыл товары из категории
     if request.args.get('category'):
         cur.execute("""select product_id from categories_products where cat_id = (select id from categories where title = ?);""", (request.args.get('category'),))
         sort_categories = []
         for item in cur.fetchall():
             sort_categories.append(item[0])
 
+        # Исключение товаров, которые не соответствуют выбранной категории
         products = [item for item in products if item[3] in sort_categories]
     context.update({'products': products})
     conn.close()
@@ -123,6 +131,14 @@ def details():
     product_info = list(cur.fetchall()[0])
     product_info.insert(0, product_title)
     context.update({'current_product': product_info})
+
+    cur.execute('''select title, image_url, price from products;''')
+    products = []
+    for item in cur.fetchall():
+        products.append(list(item))
+    shuffle(products)
+    context.update({'products': products})
+
     conn.close()
     return render_template("details.html", **context)
 
