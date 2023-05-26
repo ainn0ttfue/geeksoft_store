@@ -1,8 +1,10 @@
 ## Simple electronics store
 
+Store created as educational project during studying in technical school
+
 ### Tools:
 - **Engine**: Python Flask <br>
 - **Database**: SQLite
 
 ### Preview
-![Alt Text](.github/images/screen.png)
+![Preview](.github/images/screen.png)
